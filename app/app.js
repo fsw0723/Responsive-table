@@ -1,18 +1,9 @@
 'use strict';
 
-// Declare app level module which depends on views, and components
-angular.module('myApp', [
-  'ngRoute',
-  'myApp.view1',
-  'myApp.view2',
-  'myApp.version'
-]).
-config(['$routeProvider', function($routeProvider) {
-  $routeProvider.otherwise({redirectTo: '/view1'});
-}]).
+angular.module('myApp', []).
 directive('responsiveTable', function ($window) {
     return {
-        restrict: 'AEC',
+        restrict: 'E',
         templateUrl: 'table.html',
         link: function (scope, element) {
             var w = angular.element($window);
